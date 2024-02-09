@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 10vw 75vw 8vw 7vw;
+    align-items: center;
+    font-size: xx-large;
+    background-color: rgb(84, 42, 2);
+    color: aliceblue;;
+    text-shadow: 2px 2px 2px black;
+}
+header h1{
+    grid-column: 2;
+    /* padding-left: 90px; */
+}
+.logo{
+    grid-column:4
+}
+.logo img{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 120px;
+    /* padding-left: 100px; */
+}
+nav{
+    height: 10vh;
+    display: flex;
+    background-color: rgb(103, 56, 12);
+    color: rgb(248, 255, 249);
+    text-shadow: 2px 2px 2px black;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+li{
+    list-style: none;
+    padding-left: 20px;
+    font-size: xx-large;
+}
+nav ul li:hover{
+    font-weight: bolder;
+}
+.hm-main{
+    height: 80vh;
+    background-image: url("{{(url_for('static',filename='image.jpg'))}}");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* filter: blur(4px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    height: 60vh;
+    width: 80vw;
+    background-color: rgb(166, 115, 67);
+    border: 10px solid rgb(131, 96, 64);
+    border-radius: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form form{
+    display: grid;
+    grid-template-columns: 15vw 30vw 10vw 30vw 15vw;
+    grid-template-rows: 5vh 10vh 5vh 10vh 5vh 5vh 3vh 15vh;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+}
+.location{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.location select{
+    width: 29vw;
+    height: 6vh;
+    border-radius: 10px;
+    padding: 8px;
+}
+.bed{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+.bed input{
+    width: 28vw;
+    height: 3vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+.bath{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.bath input{
+    width: 28vw;
+    height: 3vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+.area{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.area input{
+    width: 28vw;
+    height: 3vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+.submit{
+    /* width: 70vw; */
+    /* background-color: black; */
+    grid-row: 6/7;
+    grid-column: 2/5;
+}
+.submit button{
+    width: 70vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: rgb(39, 239, 49);
+    color: white;
+    font-size: large;
+    padding: px;
+    text-shadow: 1px 1px 2px black;
+}
+.prediction{
+    /* background-color: rgb(31, 31, 9); */
+    grid-row: 8/9;
+    grid-column: 2/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+}
+footer{
+    background-color: rgb(201, 165, 131);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos img{
+    border-radius: 100px;
+}
+.ab-main{
+    min-height: 70vh;
+    padding: 30px;
+    font-size: x-large;
+}
+.ab-main ul{
+    color: brown;
+    font-weight: 1000;
+    display: inline;
+}
+.points li{
+    font-weight: 100;
+    color: black;
+}
+.cb-main{
+    min-height: 50vh;
+    padding: 50px;
+}
+.cb-main ul{
+    display: inline;
+    color: brown;
+}
+.cb-main a{
+    color: black;
+    text-decoration: underline;
+}
+@media only screen and (max-width:755px) {
+    header{
+        height: 40vh;
+        /* grid-template-columns: vw; */
+    }
+}
+@media only screen and (max-width:750px){
+    header{
+        height: 40vh;
+        grid-template-columns: 10vw;
+    }
+    .hm-main{
+        height: 100vh;
+    }
+    .form{
+        height: 85vh;
+    }
+    .form form{
+        display: grid;
+        grid-template-rows: 10vh 15vh 15vh 15vh 15vh 8vh 15vh 5vh;
+    }
+    .location{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .location select{
+        width: 50vw;
+        height: 6vh;
+        border-radius: 10px;
+        padding: 8px;
+    }
+    .bed{
+        grid-column: 2/5;
+        grid-row: 3/4;
+    }
+    .bed input{
+        width: 45vw;
+        height: 2vh;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .bath{
+        grid-column: 2/5;
+        grid-row: 4/5;
+    }
+    .bath input{
+        width: 45vw;
+        height: 2vh;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .area{
+        grid-column: 2/5;
+        grid-row: 5/6;
+    }
+    .area input{
+        width: 45vw;
+        height: 2vh;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .prediction{
+        grid-row: 7;
+    }
+}

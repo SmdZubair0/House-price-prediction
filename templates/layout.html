@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <h1>House Price Prediction</h1>
+        <div class="logo">
+            <img src="{{url_for('static',filename='logo.jpg')}}" alt="" class="s">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/about"> About </a></li>
+            <li> <a href="/contact"> Contact us </a></li>
+        </ul>
+    </nav>
+
+    {% block body %} {% endblock %}
+
+<footer>
+    <div class="logos">
+        <a href="#">
+            <img src="{{url_for('static',filename='unnamed.png')}}" height="50px" width="50px" alt="github">
+        </a>
+        <a href="#">
+            <img src="{{url_for('static',filename='link.png')}}" height="50x" width="50px" alt="linkden">
+        </a>
+        <br>
+    </div>
+</footer>
+</body>
+</html>

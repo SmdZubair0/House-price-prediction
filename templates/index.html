@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+    <main class="hm-main">
+        <div class="form">
+            <form method="post">
+                <div class="location">
+                    Location :
+                    <select name="location" required>
+                        {% for i in locations %}
+                        <option value="{{ i }}"> {{ i }} </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="bath">
+                    Number of Bathrooms :
+                    <input type="number" name="bath" placeholder="Bathrooms" required>
+                </div>
+                <div class="bed">
+                    Number of Bedrooms :
+                    <input type="number" name="bed" id="" placeholder="Bedrooms" required>
+                </div>
+                <div class="area">
+                    Area in Sqft :
+                    <input type="number" name="area" placeholder="Area in sqft" required>
+                </div>
+                <div class="submit">
+                    <button type="submit">
+                        Predict
+                    </button>
+                </div>
+                <div class="prediction">
+                    {{predict}}
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock %}
