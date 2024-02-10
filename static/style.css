@@ -54,7 +54,7 @@ nav ul li:hover{
 }
 .hm-main{
     height: 80vh;
-    background-image: url("{{(url_for('static',filename='image.jpg'))}}");
+    background-image: url("image.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     /* filter: blur(4px); */
