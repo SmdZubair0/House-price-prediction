@@ -25,7 +25,7 @@ header h1{
     /* padding-left: 90px; */
 }
 .logo{
-    grid-column:4
+    grid-column:3;
 }
 .logo img{
     height: 8vh;
@@ -54,6 +54,7 @@ nav ul li:hover{
 }
 .hm-main{
     height: 80vh;
+    width: 100vw;
     background-image: url("image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,6 +150,7 @@ nav ul li:hover{
 footer{
     background-color: rgb(201, 165, 131);
     height: 15vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
